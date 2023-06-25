@@ -1,10 +1,4 @@
-/**
-* Template Name: Personal
-* Updated: Jun 18 2023 with Bootstrap v5.3.0
-* Template URL: https://bootstrapmade.com/personal-free-resume-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function() {
   "use strict";
 
@@ -38,7 +32,7 @@
   /**
    * Scrolls to an element with header offset
    */
-  const scrollto = (el) => {
+  const scrollto = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
@@ -48,7 +42,7 @@
   /**
    * Mobile nav toggle
    */
-  on('click', '.mobile-nav-toggle', function(e) {
+  on('click', '.mobile-nav-toggle', function() {
     select('#navbar').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
@@ -80,7 +74,7 @@
         navbarToggle.classList.toggle('bi-x')
       }
 
-      if (this.hash == '#header') {
+      if (this.hash === '#header') {
         header.classList.remove('header-top')
         sections.forEach((item) => {
           item.classList.remove('section-show')
@@ -122,7 +116,7 @@
         header.classList.add('header-top')
 
         navlinks.forEach((item) => {
-          if (item.getAttribute('href') == window.location.hash) {
+          if (item.getAttribute('href') === window.location.hash) {
             item.classList.add('active')
           } else {
             item.classList.remove('active')
@@ -146,7 +140,7 @@
     new Waypoint({
       element: skilsContent,
       offset: '80%',
-      handler: function(direction) {
+      handler: function() {
         let progress = select('.progress .progress-bar', true);
         progress.forEach((el) => {
           el.style.width = el.getAttribute('aria-valuenow') + '%'
@@ -215,18 +209,18 @@
   /**
    * Initiate portfolio lightbox 
    */
-  const portfolioLightbox = GLightbox({
-    selector: '.portfolio-lightbox'
-  });
-
-  /**
-   * Initiate portfolio details lightbox 
-   */
-  const portfolioDetailsLightbox = GLightbox({
-    selector: '.portfolio-details-lightbox',
-    width: '90%',
-    height: '90vh'
-  });
+  // const portfolioLightbox = GLightbox({
+  //   selector: '.portfolio-lightbox'
+  // });
+  //
+  // /**
+  //  * Initiate portfolio details lightbox
+  //  */
+  // const portfolioDetailsLightbox = GLightbox({
+  //   selector: '.portfolio-details-lightbox',
+  //   width: '90%',
+  //   height: '90vh'
+  // });
 
   /**
    * Portfolio details slider
